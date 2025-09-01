@@ -5,16 +5,23 @@ export default function HomePage() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetchUsers();
+    getUsers();
+
+    async function getUsers() {
+      const data = localStorage.getItem("users");
+      let usersData = [];
+      setUsers(usersData);
+    }
+    // fetchUsers();
   }, []);
 
-  async function fetchUsers() {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/cederdorff/race/master/data/users.json"
-    ); // fetch the data from the API
-    const data = await response.json(); // parse the data from string to javascript array
-    setUsers(data); // set the data to the state}
-  }
+  //   async function fetchUsers() {
+  //     const response = await fetch(
+  //       "https://raw.githubusercontent.com/cederdorff/race/master/data/users.json"
+  //     ); // fetch the data from the API
+  //     const data = await response.json(); // parse the data from string to javascript array
+  //     setUsers(data); // set the data to the state}
+  //   }
 
   return (
     <main className="page">

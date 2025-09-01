@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 
 export default function App() {
   return (
-    <main ClassName="app">
+    <main className="app">
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
