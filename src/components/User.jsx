@@ -23,7 +23,7 @@ export default function User({ user }) {
       <h2>
         {user.name} ({user.mail ? getInitials() : "No Initials"})
       </h2>
-      <p className="title">{user.title ? user.title : "No Titel"}</p>
+      <p className="title">{user.title ? user.title : "No Title"}</p>
       <p>
         {user.mail ? (
           <a href={`mailto:${user.mail}`}>{user.mail}</a>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 export default function CreatePage() {
   const [name, setName] = useState("");
-  const [titel, setTitel] = useState("");
+  const [title, setTitle] = useState("");
   const [mail, setMail] = useState("");
   const [image, setImage] = useState("");
 
@@ -19,7 +19,7 @@ export default function CreatePage() {
     const newUser = {
       id: Date.now().toString(),
       name: name,
-      title: titel,
+      title: title,
       mail: mail,
       image: image,
     };
@@ -44,12 +44,12 @@ export default function CreatePage() {
           placeholder="Type a name"
           onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="titel">Titel</label>
+        <label htmlFor="title">Title</label>
         <input
-          id="titel"
+          id="title"
           type="text"
-          placeholder="Type a titel"
-          onChange={(e) => setTitel(e.target.value)}
+          placeholder="Type a title"
+          onChange={(e) => setTitle(e.target.value)}
         />
         <label htmlFor="mail">Mail</label>
         <input
